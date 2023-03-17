@@ -47,12 +47,14 @@ public class Main {
                         arrayOperations.filter(
                                 patientArray, userInterface.inputFirstNumberOfThePhone())
                 );
-                case 10 -> objectPrinter.print(arrayOperations.filter(patientArray));
+                case 10 -> objectPrinter.print(arrayOperations.filterSortedMap(patientArray));
                 case 11 -> io.saveToJSONFile(patientArray, IO.JSON_FILE);
                 case 12 -> patientArray = io.readFromJSONFile(IO.JSON_FILE);
                 case 13 -> objectPrinter.print(patientArray);
                 case 14 -> objectPrinter.print(
                         patientArray.findPatientByMedCardNo(userInterface.inputRemoveMedCardNo()));
+                case 15 -> objectPrinter.print(arrayOperations.filter(patientArray));
+                case 16 -> objectPrinter.print(arrayOperations.filterMap(patientArray));
             }
         }
     }

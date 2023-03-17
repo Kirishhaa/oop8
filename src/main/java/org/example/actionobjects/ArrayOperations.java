@@ -1,9 +1,11 @@
 package org.example.actionobjects;
 
-import org.example.structures.DiagnosArray;
+import org.example.structures.DiagnosMap;
 import org.example.structures.Patient;
 import org.example.structures.PatientArray;
 import org.example.structures.Range;
+
+import java.util.ArrayList;
 
 public class ArrayOperations {
 
@@ -45,7 +47,17 @@ public class ArrayOperations {
         return newArray;
     }
 
-    public DiagnosArray filter(PatientArray patients) {
-        return DiagnosArray.parseDiagnosArray(patients);
+    public PatientArray filter(PatientArray patientArray){
+        ArrayList<Patient> list = new ArrayList<>(
+                patientArray.getArrayListPatient().stream().distinct().toList());
+        return new PatientArray(list);
+    }
+
+    public DiagnosMap filterSortedMap(PatientArray patients) {
+        return DiagnosMap.parseDiagnosMap(patients).sort();
+    }
+
+    public DiagnosMap filterMap(PatientArray patientArray){
+        return DiagnosMap.parseDiagnosMap(patientArray);
     }
 }

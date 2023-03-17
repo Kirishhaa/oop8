@@ -64,11 +64,13 @@ public class UserInterface {
                     7.Sort patients by medCardNo:
                     8.Print patients with medCardNo in range of:
                     9.Print patients with first number of their phoneNumber
-                    10.Print diagnosis/amounts of patients
+                    10.Map diagnosis/amounts sorted
                     11.Save to JSON file
                     12.Read from JSON file
                     13.Print patients array
                     14.Find patients by medCardNo
+                    15.List patients without duplicates
+                    16.Map diagnoses/amounts
                     0.Exit""");
         return Integer.parseInt(scanner.nextLine());
     }

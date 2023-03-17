@@ -1,6 +1,6 @@
 package org.example.actionobjects;
 
-import org.example.structures.DiagnosArray;
+import org.example.structures.DiagnosMap;
 import org.example.structures.Patient;
 import org.example.structures.PatientArray;
 
@@ -13,7 +13,7 @@ public class ObjectPrinter {
             print(patientArray.get(i));
         }
     }
-    public void print(DiagnosArray diagnosArray){
+    public void print(DiagnosMap diagnosArray){
         System.out.print(diagnosArray);
     }
 }
